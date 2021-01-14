@@ -1,0 +1,29 @@
+{
+    "BYOError": {
+        "InvalidPage": "Invalid Page"
+    },
+    "BYOHome": {
+        "Title": "Start Building Your Page",
+        "Subtitle": "Drag and drop a component into the content slots."  
+    },
+    "LoginPageLwc": {
+        "username_text": "Username",
+        "password_text": "Password",
+        "login_button": "Log In",
+        "forgot_password_link": "Forget your password?",
+        "self_register_link": "Not a member?",
+        "social_login_header": "Or log in using:",
+        "employee_login_link": "Are you an employee? Log in"
+    },
+    "Check_Email": {
+        "title": "Check Your Email"
+    },
+    "ForgotPasswordPage": {
+        "forgot_title_start": "Forgot Your Password",
+        "forgot_password_pre_instructions2_communities_198": "To reset your password, enter your username.",
+        "forgot_password_return_login": "Return to Login",
+        "forgot_email_instructions4_198": "We’ve sent you an email with a link to finish setting your password.",
+        "forgot_email_instructions3_198": "Can’t find the email? Try checking your spam folder.",
+        "forgot_password_instructions3": "If you still can't log in, contact your administrator."
+    }
+}

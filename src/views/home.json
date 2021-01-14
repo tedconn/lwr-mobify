@@ -1,0 +1,8 @@
+{
+    "devName": "home",
+    "label": "Home",
+    "themeLayoutType": "Inner",
+    "component": {
+        "descriptor": "x/home"
+    }
+}

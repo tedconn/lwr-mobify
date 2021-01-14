@@ -1,0 +1,7 @@
+{
+    "devName": "headerAndFooter",
+    "label": "Default Header and Footer",
+    "component": {
+        "descriptor": "x/headerAndFooter"
+    }
+}

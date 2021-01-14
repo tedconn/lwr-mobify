@@ -1,0 +1,10 @@
+{
+    "id": "byo",
+    "devName": "byo",
+    "branding": "branding.json",
+    "themeLayouts": {
+        "Inner": { 
+            "view": "headerAndFooter"
+        }
+    }
+}

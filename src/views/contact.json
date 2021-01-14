@@ -1,0 +1,8 @@
+{
+    "devName": "contact",
+    "label": "Contact",
+    "themeLayoutType": "Inner",
+    "component": {
+        "descriptor": "x/contact"
+    }
+}
