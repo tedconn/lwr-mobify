@@ -11,9 +11,6 @@ module.exports = {
     httpHeaders: [],
     recordApiCalls: false,
   },
-  app: {
-    defaultTemplate: "src/index.html",
-  },
   templateDir: ".",
   basePath: "",
   port: process.env.PORT || 3000,

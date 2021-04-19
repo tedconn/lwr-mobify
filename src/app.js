@@ -9,6 +9,9 @@ const server = new Server({
             basePath: config.basePath,
             port: config.port,
         },
+        app: {
+            defaultTemplate: "src/index.html",
+        },
     },
     configFiles: [require.resolve('@communities-webruntime/app')],
     additionalProperties: {

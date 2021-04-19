@@ -7,7 +7,8 @@
     "@communities-webruntime/app": "^0.50.6",
     "@webruntime/server": "^0.37.1",
     "aws-serverless-express": "^3.3.8",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "lwc": "1.6.2"
   },
   "devDependencies": {
     "progressive-web-sdk": "^1.16.1",
