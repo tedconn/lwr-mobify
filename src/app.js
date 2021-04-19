@@ -1,6 +1,22 @@
-const express = require('express')
+// Shared entry point for local dev and while running in MR.
+const config = require('./config');
+const { Server } = require('@webruntime/server');
 
-const app = express()
-app.all('/*', (req, res) => res.send('<html><body><h1>👋 Hello Mobify</h1></html>'))
+const server = new Server({
+    config: {
+        projectDir: config.templateDir,
+        server: {
+            basePath: config.basePath,
+            port: config.port,
+        },
+    },
+    configFiles: [require.resolve('@communities-webruntime/app')],
+    additionalProperties: {
+        compiler: config.compiler,
+        locker: config.locker,
+        api: config.api
+    }
+});
+server.initialize();
 
-module.exports = app
+module.exports = server

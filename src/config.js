@@ -12,6 +12,6 @@ module.exports = {
         recordApiCalls: false
     },
     templateDir: ".",
-    basePath: "/",
+    basePath: "",
     port: process.env.PORT || 3000
 }
