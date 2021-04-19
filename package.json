@@ -4,7 +4,7 @@
     "node": "^12"
   },
   "dependencies": {
-    "@communities-webruntime/app": "^0.37.1",
+    "@communities-webruntime/app": "^0.50.6",
     "@webruntime/server": "^0.37.1",
     "aws-serverless-express": "^3.3.8",
     "express": "^4.17.1"
