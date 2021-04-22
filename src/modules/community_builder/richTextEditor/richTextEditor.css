@@ -1,0 +1,813 @@
+:host {
+    display: block;
+}
+
+/* Runtime Quill css, need to be consistent with outputRichText.css */
+.ql-editor {
+    box-sizing: border-box;
+    line-height: 1.42;
+    height: 100%;
+    outline: none;
+    overflow-y: auto;
+    tab-size: 4;
+    -moz-tab-size: 4;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.ql-editor > * {
+    cursor: text;
+}
+.ql-editor p,
+.ql-editor ol,
+.ql-editor ul,
+.ql-editor pre,
+.ql-editor blockquote,
+.ql-editor h1,
+.ql-editor h2,
+.ql-editor h3,
+.ql-editor h4,
+.ql-editor h5,
+.ql-editor h6 {
+    margin: 0;
+    padding: 0;
+    counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+}
+.ql-editor ol,
+.ql-editor ul {
+    padding-left: 1.5em;
+}
+.ql-editor ol > li,
+.ql-editor ul > li {
+    list-style-type: none;
+}
+.ql-editor ul > li::before {
+    content: '\2022';
+}
+.ql-editor ul[data-checked='true'],
+.ql-editor ul[data-checked='false'] {
+    pointer-events: none;
+}
+.ql-editor ul[data-checked='true'] > li *,
+.ql-editor ul[data-checked='false'] > li * {
+    pointer-events: all;
+}
+.ql-editor ul[data-checked='true'] > li::before,
+.ql-editor ul[data-checked='false'] > li::before {
+    color: #777;
+    cursor: pointer;
+    pointer-events: all;
+}
+.ql-editor ul[data-checked='true'] > li::before {
+    content: '\2611';
+}
+.ql-editor ul[data-checked='false'] > li::before {
+    content: '\2610';
+}
+.ql-editor li::before {
+    display: inline-block;
+    white-space: nowrap;
+    width: 1.2em;
+}
+.ql-editor li:not(.ql-direction-rtl)::before {
+    margin-left: -1.5em;
+    margin-right: 0.3em;
+    text-align: right;
+}
+.ql-editor li.ql-direction-rtl::before {
+    margin-left: 0.3em;
+    margin-right: -1.5em;
+}
+.ql-editor li:not(.ql-direction-rtl) {
+    padding-left: 1.5em;
+}
+.ql-editor li.ql-direction-rtl {
+    padding-right: 1.5em;
+}
+.ql-editor ol li {
+    counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+    counter-increment: list-0;
+}
+.ql-editor ol li:before {
+    content: counter(list-0, decimal) '. ';
+}
+.ql-editor ol li.ql-indent-1 {
+    counter-increment: list-1;
+}
+.ql-editor ol li.ql-indent-1:before {
+    content: counter(list-1, lower-alpha) '. ';
+}
+.ql-editor ol li.ql-indent-1 {
+    counter-reset: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+}
+.ql-editor ol li.ql-indent-2 {
+    counter-increment: list-2;
+}
+.ql-editor ol li.ql-indent-2:before {
+    content: counter(list-2, lower-roman) '. ';
+}
+.ql-editor ol li.ql-indent-2 {
+    counter-reset: list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+}
+.ql-editor ol li.ql-indent-3 {
+    counter-increment: list-3;
+}
+.ql-editor ol li.ql-indent-3:before {
+    content: counter(list-3, decimal) '. ';
+}
+.ql-editor ol li.ql-indent-3 {
+    counter-reset: list-4 list-5 list-6 list-7 list-8 list-9;
+}
+.ql-editor ol li.ql-indent-4 {
+    counter-increment: list-4;
+}
+.ql-editor ol li.ql-indent-4:before {
+    content: counter(list-4, lower-alpha) '. ';
+}
+.ql-editor ol li.ql-indent-4 {
+    counter-reset: list-5 list-6 list-7 list-8 list-9;
+}
+.ql-editor ol li.ql-indent-5 {
+    counter-increment: list-5;
+}
+.ql-editor ol li.ql-indent-5:before {
+    content: counter(list-5, lower-roman) '. ';
+}
+.ql-editor ol li.ql-indent-5 {
+    counter-reset: list-6 list-7 list-8 list-9;
+}
+.ql-editor ol li.ql-indent-6 {
+    counter-increment: list-6;
+}
+.ql-editor ol li.ql-indent-6:before {
+    content: counter(list-6, decimal) '. ';
+}
+.ql-editor ol li.ql-indent-6 {
+    counter-reset: list-7 list-8 list-9;
+}
+.ql-editor ol li.ql-indent-7 {
+    counter-increment: list-7;
+}
+.ql-editor ol li.ql-indent-7:before {
+    content: counter(list-7, lower-alpha) '. ';
+}
+.ql-editor ol li.ql-indent-7 {
+    counter-reset: list-8 list-9;
+}
+.ql-editor ol li.ql-indent-8 {
+    counter-increment: list-8;
+}
+.ql-editor ol li.ql-indent-8:before {
+    content: counter(list-8, lower-roman) '. ';
+}
+.ql-editor ol li.ql-indent-8 {
+    counter-reset: list-9;
+}
+.ql-editor ol li.ql-indent-9 {
+    counter-increment: list-9;
+}
+.ql-editor ol li.ql-indent-9:before {
+    content: counter(list-9, decimal) '. ';
+}
+.ql-editor .ql-indent-1:not(.ql-direction-rtl) {
+    padding-left: 3em;
+}
+.ql-editor li.ql-indent-1:not(.ql-direction-rtl) {
+    padding-left: 4.5em;
+}
+.ql-editor .ql-indent-1.ql-direction-rtl.ql-align-right {
+    padding-right: 3em;
+}
+.ql-editor li.ql-indent-1.ql-direction-rtl.ql-align-right {
+    padding-right: 4.5em;
+}
+.ql-editor .ql-indent-2:not(.ql-direction-rtl) {
+    padding-left: 6em;
+}
+.ql-editor li.ql-indent-2:not(.ql-direction-rtl) {
+    padding-left: 7.5em;
+}
+.ql-editor .ql-indent-2.ql-direction-rtl.ql-align-right {
+    padding-right: 6em;
+}
+.ql-editor li.ql-indent-2.ql-direction-rtl.ql-align-right {
+    padding-right: 7.5em;
+}
+.ql-editor .ql-indent-3:not(.ql-direction-rtl) {
+    padding-left: 9em;
+}
+.ql-editor li.ql-indent-3:not(.ql-direction-rtl) {
+    padding-left: 10.5em;
+}
+.ql-editor .ql-indent-3.ql-direction-rtl.ql-align-right {
+    padding-right: 9em;
+}
+.ql-editor li.ql-indent-3.ql-direction-rtl.ql-align-right {
+    padding-right: 10.5em;
+}
+.ql-editor .ql-indent-4:not(.ql-direction-rtl) {
+    padding-left: 12em;
+}
+.ql-editor li.ql-indent-4:not(.ql-direction-rtl) {
+    padding-left: 13.5em;
+}
+.ql-editor .ql-indent-4.ql-direction-rtl.ql-align-right {
+    padding-right: 12em;
+}
+.ql-editor li.ql-indent-4.ql-direction-rtl.ql-align-right {
+    padding-right: 13.5em;
+}
+.ql-editor .ql-indent-5:not(.ql-direction-rtl) {
+    padding-left: 15em;
+}
+.ql-editor li.ql-indent-5:not(.ql-direction-rtl) {
+    padding-left: 16.5em;
+}
+.ql-editor .ql-indent-5.ql-direction-rtl.ql-align-right {
+    padding-right: 15em;
+}
+.ql-editor li.ql-indent-5.ql-direction-rtl.ql-align-right {
+    padding-right: 16.5em;
+}
+.ql-editor .ql-indent-6:not(.ql-direction-rtl) {
+    padding-left: 18em;
+}
+.ql-editor li.ql-indent-6:not(.ql-direction-rtl) {
+    padding-left: 19.5em;
+}
+.ql-editor .ql-indent-6.ql-direction-rtl.ql-align-right {
+    padding-right: 18em;
+}
+.ql-editor li.ql-indent-6.ql-direction-rtl.ql-align-right {
+    padding-right: 19.5em;
+}
+.ql-editor .ql-indent-7:not(.ql-direction-rtl) {
+    padding-left: 21em;
+}
+.ql-editor li.ql-indent-7:not(.ql-direction-rtl) {
+    padding-left: 22.5em;
+}
+.ql-editor .ql-indent-7.ql-direction-rtl.ql-align-right {
+    padding-right: 21em;
+}
+.ql-editor li.ql-indent-7.ql-direction-rtl.ql-align-right {
+    padding-right: 22.5em;
+}
+.ql-editor .ql-indent-8:not(.ql-direction-rtl) {
+    padding-left: 24em;
+}
+.ql-editor li.ql-indent-8:not(.ql-direction-rtl) {
+    padding-left: 25.5em;
+}
+.ql-editor .ql-indent-8.ql-direction-rtl.ql-align-right {
+    padding-right: 24em;
+}
+.ql-editor li.ql-indent-8.ql-direction-rtl.ql-align-right {
+    padding-right: 25.5em;
+}
+.ql-editor .ql-indent-9:not(.ql-direction-rtl) {
+    padding-left: 27em;
+}
+.ql-editor li.ql-indent-9:not(.ql-direction-rtl) {
+    padding-left: 28.5em;
+}
+.ql-editor .ql-indent-9.ql-direction-rtl.ql-align-right {
+    padding-right: 27em;
+}
+.ql-editor li.ql-indent-9.ql-direction-rtl.ql-align-right {
+    padding-right: 28.5em;
+}
+.ql-editor .ql-video {
+    display: block;
+    max-width: 100%;
+}
+.ql-editor .ql-video.ql-align-center {
+    margin: 0 auto;
+}
+.ql-editor .ql-video.ql-align-right {
+    margin: 0 0 0 auto;
+}
+.ql-editor .ql-bg-black {
+    background-color: #000;
+}
+
+.ql-editor .ql-bg-red {
+    background-color: #e60000;
+}
+.ql-editor .ql-bg-orange {
+    background-color: #f90;
+}
+.ql-editor .ql-bg-yellow {
+    background-color: #ff0;
+}
+.ql-editor .ql-bg-green {
+    background-color: #008a00;
+}
+.ql-editor .ql-bg-blue {
+    background-color: #06c;
+}
+.ql-editor .ql-bg-purple {
+    background-color: #93f;
+}
+.ql-editor .ql-color-white {
+    color: #fff;
+}
+.ql-editor .ql-color-red {
+    color: #e60000;
+}
+.ql-editor .ql-color-orange {
+    color: #f90;
+}
+.ql-editor .ql-color-yellow {
+    color: #ff0;
+}
+.ql-editor .ql-color-green {
+    color: #008a00;
+}
+.ql-editor .ql-color-blue {
+    color: #06c;
+}
+.ql-editor .ql-color-purple {
+    color: #93f;
+}
+.ql-editor .ql-direction-rtl {
+    direction: rtl;
+    text-align: inherit;
+}
+.ql-editor .ql-align-center {
+    text-align: center;
+}
+.ql-editor .ql-align-justify {
+    text-align: justify;
+}
+.ql-editor .ql-align-right {
+    text-align: right;
+}
+.ql-editor.ql-blank::before {
+    color: rgba(0, 0, 0, 0.6);
+    content: attr(data-placeholder);
+    font-style: italic;
+    left: 15px;
+    pointer-events: none;
+    position: absolute;
+    right: 15px;
+}
+
+.ql-editor h1 {
+    font-size: 2em;
+}
+.ql-editor h2 {
+    font-size: 1.5em;
+}
+.ql-editor h3 {
+    font-size: 1.17em;
+}
+.ql-editor h4 {
+    font-size: 1em;
+}
+.ql-editor h5 {
+    font-size: 0.83em;
+}
+.ql-editor h6 {
+    font-size: 0.67em;
+}
+.ql-editor a {
+    text-decoration: underline;
+}
+.ql-editor blockquote {
+    border-left: 4px solid #ccc;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-left: 16px;
+}
+.ql-editor code,
+.ql-editor pre {
+    background-color: #f0f0f0;
+    border-radius: 3px;
+}
+.ql-editor pre {
+    white-space: pre-wrap;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 5px 10px;
+}
+.ql-editor code {
+    font-size: 85%;
+    padding: 2px 4px;
+}
+.ql-editor pre.ql-syntax {
+    background-color: #23241f;
+    color: #f8f8f2;
+    overflow: visible;
+}
+.ql-editor img {
+    max-width: 100%;
+}
+.ql-editor a {
+    color: #06c;
+}
+
+.ql-editor .cb-video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    max-width: 100%;
+    height: 0;
+}
+
+.ql-editor .cb-video-container .ql-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Design time css */
+.ql-container {
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0px;
+    position: relative;
+}
+.ql-container.ql-disabled .ql-editor ul[data-checked] > li::before {
+    pointer-events: none;
+}
+.ql-clipboard {
+    left: -100000px;
+    height: 1px;
+    overflow-y: hidden;
+    position: absolute;
+    top: 50%;
+}
+.ql-clipboard p {
+    margin: 0;
+    padding: 0;
+}
+
+.ql-slds {
+    border: 1px solid #dddbda;
+    border-radius: 4px;
+    position: relative;
+}
+
+.ql-slds .ql-toolbar {
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+    padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+    background-color: #f3f2f2;
+    color: #1a1b1e;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    white-space: nowrap;
+    border-bottom: 1px solid #dddbda;
+}
+
+.ql-slds .ql-toolbar:after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+.ql-slds .ql-toolbar .button-group {
+    list-style: none;
+    display: inline-flex;
+}
+
+.ql-slds .ql-toolbar button {
+    color: #706e6b;
+    background-color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #dddbda;
+    padding-left: 7px;
+    line-height: 1;
+    vertical-align: middle;
+    outline: 0;
+}
+
+.ql-slds .ql-toolbar button svg {
+    float: left;
+    height: 100%;
+}
+.ql-slds .ql-toolbar button:hover,
+.ql-slds .ql-toolbar button:focus {
+    color: #06c;
+}
+
+.ql-slds .ql-toolbar button.ql-active {
+    color: #fff;
+    background-color: #06c;
+}
+
+.ql-slds .ql-toolbar .ql-picker {
+    outline: none;
+}
+
+.ql-slds .ql-toolbar button:focus {
+    position: relative;
+    z-index: 1;
+    border-color: #1589ee;
+    box-shadow: 0 0 3px #0070d2;
+}
+
+.ql-slds .ql-picker-label {
+    outline-color: #1589ee;
+}
+
+.ql-slds {
+    box-sizing: border-box;
+}
+.ql-slds * {
+    box-sizing: border-box;
+}
+.ql-slds .ql-hidden {
+    display: none;
+}
+.ql-slds .ql-out-bottom,
+.ql-slds .ql-out-top {
+    visibility: hidden;
+}
+.ql-slds .ql-formats {
+    display: inline-block;
+    vertical-align: middle;
+}
+.ql-slds .ql-formats:after {
+    clear: both;
+    content: '';
+    display: table;
+}
+.ql-slds .ql-fill {
+    fill: #444;
+}
+.ql-slds .ql-empty {
+    fill: none;
+}
+.ql-slds .ql-even {
+    fill-rule: evenodd;
+}
+.ql-slds .ql-thin,
+.ql-slds .ql-stroke.ql-thin {
+    stroke-width: 1;
+}
+.ql-slds .ql-transparent {
+    opacity: 0.4;
+}
+.ql-slds .ql-direction svg:last-child {
+    display: none;
+}
+.ql-slds .ql-direction.ql-active svg:last-child {
+    display: inline;
+}
+.ql-slds .ql-direction.ql-active svg:first-child {
+    display: none;
+}
+.ql-slds .ql-picker {
+    background-color: #fff;
+    display: inline-block;
+    height: 32px;
+    border: 1px solid #dddbda;
+    position: relative;
+    vertical-align: middle;
+    float: left;
+}
+
+.ql-slds .ql-picker.ql-font,
+.ql-slds .ql-picker.ql-size {
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.ql-slds .ql-picker.ql-color {
+    border-radius: 4px 0 0 4px;
+}
+
+.ql-slds .ql-picker.ql-background {
+    border-radius: 0 4px 4px 0;
+    margin-left: -1px;
+}
+
+.ql-slds .ql-picker.ql-font,
+.ql-slds .ql-picker.ql-size,
+.ql-slds .ql-picker.ql-background {
+    margin-right: 4px;
+}
+
+.ql-slds .ql-font .ql-picker-label,
+.ql-slds .ql-size .ql-picker-label {
+    cursor: pointer;
+    display: inline-block;
+    height: 100%;
+    padding-left: 8px;
+    padding-right: 2px;
+    width: 100%;
+}
+
+.ql-slds .ql-toolbar .ql-font .ql-picker-label svg,
+.ql-slds .ql-toolbar .ql-size .ql-picker-label svg {
+    position: absolute;
+    right: 2px;
+    width: 22px;
+}
+
+.ql-slds .ql-picker-label::before {
+    display: inline-block;
+    line-height: 30px;
+}
+.ql-slds .ql-picker-options {
+    background-color: #fff;
+    display: none;
+    min-width: 100%;
+    position: absolute;
+    white-space: nowrap;
+    font-size: 12px;
+}
+.ql-slds .ql-picker-options .ql-picker-item {
+    cursor: pointer;
+    display: block;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding: 8px 12px;
+}
+
+.ql-slds .ql-picker.ql-expanded .ql-picker-label {
+    z-index: 2;
+}
+.ql-slds .ql-picker.ql-expanded .ql-picker-options {
+    display: block;
+    top: 100%;
+    z-index: 1;
+}
+
+.ql-slds .ql-color-picker .ql-picker-label {
+    cursor: pointer;
+    color: #706e6b;
+    display: inline-block;
+    width: 36px;
+    height: 100%;
+    padding-top: 4px;
+    padding-left: 8px;
+}
+
+.ql-slds .ql-color-picker .ql-picker-label:hover,
+.ql-slds .ql-color-picker .ql-picker-label:focus {
+    color: #06c;
+}
+
+.ql-slds .ql-color-picker .ql-picker-label .icon {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+}
+
+.ql-slds .ql-color-picker .ql-picker-label .down-icon {
+    width: 8px;
+    height: 8px;
+    fill: currentColor;
+}
+
+.ql-slds .ql-color-picker .ql-picker-options {
+    padding: 3px 5px;
+    width: 152px;
+}
+.ql-slds .ql-color-picker .ql-picker-item {
+    border: 1px solid transparent;
+    float: left;
+    height: 16px;
+    margin: 2px;
+    padding: 0px;
+    width: 16px;
+}
+
+.ql-slds .ql-toolbar .ql-picker-item:focus,
+.ql-slds .ql-toolbar .ql-picker-item:hover {
+    background-color: #f3f2f2;
+}
+
+.ql-slds .ql-toolbar .ql-picker-label svg polygon:nth-child(1) {
+    stroke: #706e6b;
+    stroke-width: 2px;
+}
+
+.ql-slds .ql-toolbar .ql-picker-label svg polygon:nth-child(2) {
+    display: none;
+}
+
+.ql-slds .ql-picker.ql-header .ql-picker-label[data-label]::before,
+.ql-slds .ql-picker.ql-font .ql-picker-label[data-label]::before,
+.ql-slds .ql-picker.ql-size .ql-picker-label[data-label]::before,
+.ql-slds .ql-picker.ql-header .ql-picker-item[data-label]::before,
+.ql-slds .ql-picker.ql-font .ql-picker-item[data-label]::before,
+.ql-slds .ql-picker.ql-size .ql-picker-item[data-label]::before {
+    content: attr(data-label);
+}
+.ql-slds .ql-picker.ql-header {
+    width: 98px;
+}
+.ql-slds .ql-color-picker.ql-background .ql-picker-item {
+    background-color: #fff;
+}
+.ql-slds .ql-color-picker.ql-color .ql-picker-item {
+    background-color: #000;
+}
+.ql-slds .ql-toolbar .ql-formats {
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+.ql-slds .ql-toolbar .ql-picker-options {
+    border: 1px solid transparent;
+}
+.ql-slds .ql-toolbar .ql-picker.ql-expanded .ql-picker-options {
+    border-radius: 4px;
+    border-color: #dddbda;
+}
+.ql-slds .ql-toolbar .ql-color-picker .ql-picker-item.ql-selected,
+.ql-slds .ql-toolbar .ql-color-picker .ql-picker-item:hover {
+    border-color: #000;
+}
+.ql-slds .ql-toolbar button .icon,
+.ql-slds .ql-toolbar .help-text .icon {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+}
+
+.ql-slds .ql-toolbar .button-group li:first-child button {
+    border-radius: 4px 0 0 4px;
+}
+
+.ql-slds .ql-toolbar .button-group li:last-child button {
+    border-radius: 0 4px 4px 0;
+}
+
+.ql-slds .ql-toolbar .button-group li:only-child button {
+    border-radius: 4px;
+}
+
+.ql-slds .ql-toolbar .button-group li + li button {
+    margin-left: -1px;
+}
+
+.ql-slds .ql-picker.ql-font {
+    width: 192px;
+}
+.ql-slds .ql-picker.ql-size {
+    width: 120px;
+}
+
+.ql-slds .ql-toolbar .help-text a {
+    color: #706e6b;
+}
+
+.ql-slds .ql-toolbar .help-text a:focus,
+.ql-slds .ql-toolbar .help-text a:hover {
+    color: #005fb2;
+}
+
+.ql-slds .ql-toolbar .default-option.help-text {
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+}
+
+.ql-slds .cb-video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    max-width: 100%;
+    height: 0;
+}
+
+.ql-slds .cb-video-container .ql-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.ql-image-resize-overlay {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px dashed blue;
+}
+
+.ql-image-resize-handle {
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border: 1px solid blue;
+    color: white;
+    background-color: blue;
+    opacity: 0.8;
+}
+
+.cb-spinner {
+    height: 100%;
+    width: 100%;
+}

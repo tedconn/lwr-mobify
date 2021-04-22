@@ -5,8 +5,12 @@
   },
   "dependencies": {
     "@communities-webruntime/app": "^0.50.6",
+    "@communities-webruntime/services": "^0.50.6",
+    "@communities-webruntime/template-generators-ui-lightning-community": "^0.50.6",
     "@webruntime/server": "^0.37.1",
     "aws-serverless-express": "^3.3.8",
+    "colors": "^1.4.0",
+    "cpx": "^1.5.0",
     "express": "^4.17.1",
     "lwc": "1.6.2"
   },

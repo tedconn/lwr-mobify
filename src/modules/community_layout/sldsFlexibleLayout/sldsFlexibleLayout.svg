@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="170px" height="170px" viewBox="0 0 170 170" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>icon-dynamic</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="170" height="45"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="170" height="45" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="3.62376795e-13" y="50" width="83.4911242" height="45"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="83.4911242" height="45" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <rect id="path-5" x="-4.29878355e-13" y="100" width="40.2366864" height="45"></rect>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="40.2366864" height="45" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <rect id="path-7" x="86.5088757" y="100" width="40.2366864" height="45"></rect>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="40.2366864" height="45" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+        <rect id="path-9" x="86.5088757" y="50" width="83.4911242" height="45"></rect>
+        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="83.4911242" height="45" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+        <rect id="path-11" x="43.2544379" y="100" width="40.2366864" height="45"></rect>
+        <mask id="mask-12" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="40.2366864" height="45" fill="white">
+            <use xlink:href="#path-11"></use>
+        </mask>
+        <rect id="path-13" x="129.763314" y="100" width="40.2366864" height="45"></rect>
+        <mask id="mask-14" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="40.2366864" height="45" fill="white">
+            <use xlink:href="#path-13"></use>
+        </mask>
+    </defs>
+    <g id="icon-dynamic" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-dynamic-copy">
+            <use id="Rectangle" stroke="#9AA1AE" mask="url(#mask-2)" stroke-width="2" fill="#BEC5D0" stroke-dasharray="2,1" xlink:href="#path-1"></use>
+            <use id="Rectangle-Copy-6" stroke="#9AA1AE" mask="url(#mask-4)" stroke-width="2" fill-opacity="0.296465253" fill="#BEC5D0" stroke-dasharray="2,1" xlink:href="#path-3"></use>
+            <use id="Rectangle-Copy-8" stroke="#9AA1AE" mask="url(#mask-6)" stroke-width="2" stroke-dasharray="2,1" xlink:href="#path-5"></use>
+            <use id="Rectangle-Copy-10" stroke="#9AA1AE" mask="url(#mask-8)" stroke-width="2" stroke-dasharray="2,1" xlink:href="#path-7"></use>
+            <use id="Rectangle-Copy-7" stroke="#9AA1AE" mask="url(#mask-10)" stroke-width="2" fill-opacity="0.296465253" fill="#BEC5D0" stroke-dasharray="2,1" xlink:href="#path-9"></use>
+            <use id="Rectangle-Copy-9" stroke="#9AA1AE" mask="url(#mask-12)" stroke-width="2" stroke-dasharray="2,1" xlink:href="#path-11"></use>
+            <use id="Rectangle-Copy-11" stroke="#9AA1AE" mask="url(#mask-14)" stroke-width="2" stroke-dasharray="2,1" xlink:href="#path-13"></use>
+            <text id="+" font-family="SalesforceSans-Regular, Salesforce Sans" font-size="24" font-weight="normal" letter-spacing="0.2005714" fill="#D8DDE5">
+                <tspan x="77.5797143" y="165">+</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

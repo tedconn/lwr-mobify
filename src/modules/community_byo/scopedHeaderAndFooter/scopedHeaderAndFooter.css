@@ -1,0 +1,29 @@
+:host {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.logo {
+    background-image: var(--dxp-s-site-logo-url);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+
+.header-content {
+    background-color: rgb(239, 240, 242);
+    max-width: var(--dxp-c-header-content-max-width);
+    margin: 0 auto;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.footer-content {
+    background-color: rgb(239, 240, 242);
+    max-width: var(--dxp-c-footer-content-max-width);
+    margin: 0 auto;
+}

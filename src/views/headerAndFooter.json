@@ -2,6 +2,14 @@
     "devName": "headerAndFooter",
     "label": "Default Header and Footer",
     "component": {
-        "descriptor": "x/headerAndFooter"
+        "descriptor": "community_byo/headerAndFooter",
+        "regions": [
+            {
+                "slotName": "header"
+            },
+            {
+                "slotName": "footer"
+            }
+        ]
     }
 }

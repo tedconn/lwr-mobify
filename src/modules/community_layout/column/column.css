@@ -1,0 +1,108 @@
+:host {
+    padding: var(--dxp-c-column-container-spacing-block-start)
+        var(--dxp-c-column-container-spacing-inline-end)
+        var(--dxp-c-column-container-spacing-block-end)
+        var(--dxp-c-column-container-spacing-inline-start);
+}
+
+/** 
+  * All .col-* classes are on :host, so :host prefix is required
+  *
+  * Each col-width class/media query is ported from salesforce-lightning-design-system.min.css
+  * class names have been modified from .slds-* -> .col-*
+  */
+:host.col {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+:host.col-size_12-of-12 {
+    width: 100%;
+}
+
+/** Use cascading so that this overrides the above styles */
+:host[class*='col-size_'] {
+    /* stretch to fill full height of section container */
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+}
+
+.column-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    padding: var(--dxp-c-column-content-spacing-block-start)
+        var(--dxp-c-column-content-spacing-inline-end)
+        var(--dxp-c-column-content-spacing-block-end)
+        var(--dxp-c-column-content-spacing-inline-start);
+
+    background: var(--dxp-g-root, transparent);
+}
+
+@media (max-width: 48em) {
+    :host {
+        padding: var(--dxp-c-column-container-spacing-block-start-mobile)
+            var(--dxp-c-column-container-spacing-inline-end-mobile)
+            var(--dxp-c-column-container-spacing-block-end-mobile)
+            var(--dxp-c-column-container-spacing-inline-start-mobile);
+    }
+
+    :host.col-max-medium-size_12-of-12 {
+        width: 100%;
+    }
+
+    .column-content {
+        padding: var(--dxp-c-column-content-spacing-block-start-mobile)
+            var(--dxp-c-column-content-spacing-inline-end-mobile)
+            var(--dxp-c-column-content-spacing-block-end-mobile)
+            var(--dxp-c-column-content-spacing-inline-start-mobile);
+    }
+}
+
+@media (min-width: 64em) {
+    :host.col-large-size_1-of-12 {
+        width: 8.3333333333%;
+    }
+    :host.col-large-size_2-of-12 {
+        width: 16.6666666667%;
+    }
+
+    :host.col-large-size_3-of-12 {
+        width: 25%;
+    }
+
+    :host.col-large-size_4-of-12 {
+        width: 33.3333333333%;
+    }
+
+    :host.col-large-size_5-of-12 {
+        width: 41.6666666667%;
+    }
+    :host.col-large-size_6-of-12 {
+        width: 50%;
+    }
+    :host.col-large-size_7-of-12 {
+        width: 58.3333333333%;
+    }
+
+    :host.col-large-size_8-of-12 {
+        width: 66.6666666667%;
+    }
+
+    :host.col-large-size_9-of-12 {
+        width: 75%;
+    }
+
+    :host.col-large-size_10-of-12 {
+        width: 83.3333333333%;
+    }
+    :host.col-large-size_11-of-12 {
+        width: 91.6666666667%;
+    }
+
+    :host.col-large-size_12-of-12 {
+        width: 100%;
+    }
+}

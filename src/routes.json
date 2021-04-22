@@ -9,33 +9,87 @@
         "page": {
             "type": "comm__namedPage",
             "attributes": {
-                "name": "home"
+                "name": "Home"
             }
         }
     },
     {
-        "id": "features",
-        "devName": "Features",
-        "path": "/features",
-        "view": "features",
-        "label": "Features",
+        "id": "error",
+        "devName": "Error",
+        "path": "/error",
+        "isDefault": true,
+        "view": "error",
+        "label": "Error",
         "page": {
             "type": "comm__namedPage",
             "attributes": {
-                "name": "features"
+                "name": "Error"
             }
         }
     },
     {
-        "id": "contact",
-        "devName": "Contact",
-        "path": "/contact",
-        "view": "contact",
-        "label": "Contact",
+        "id": "login",
+        "devName": "Login",
+        "path": "/login",
+        "view": "login",
+        "label": "Login",
         "page": {
             "type": "comm__namedPage",
             "attributes": {
-                "name": "contact"
+                "name": "Login"
+            }
+        }
+    },
+    {
+        "id": "forgotPassword",
+        "devName": "Forgot_Password",
+        "path": "/ForgotPassword",
+        "view": "forgotPassword",
+        "label": "Forgot Password", 
+        "page": {
+            "type": "comm__namedPage",
+            "attributes": {
+                "name": "Forgot_Password"
+            }
+        }
+    },
+    {
+        "id": "checkPasswordResetEmail",
+        "devName": "Check_Password",
+        "path": "/CheckPasswordResetEmail",
+        "view": "checkPasswordResetEmail",
+        "label": "Check Password",
+        "page": {
+            "type": "comm__namedPage",
+            "attributes": {
+                "name": "Check_Password"
+            }
+        }
+    },
+    {
+        "id": "register",
+        "devName": "Register",
+        "path": "/SelfRegister",
+        "view": "register",
+        "label": "Register",
+        "page": {
+            "type": "comm__namedPage",
+            "attributes":{
+                "name": "Register"
+            }
+        }
+    },
+    {
+        "id": "serviceNotAvailable",
+        "devName": "Service_Not_Available",
+        "path": "/ServiceNotAvailable",
+        "view": "serviceNotAvailable",
+        "label": "Service Not Available",
+        "configurationTags": ["allow-in-static-site"],
+        "page": {
+            "type": "comm__namedPage",
+            "attributes": {
+                "name": "Service_Not_Available"
             }
         }
     }

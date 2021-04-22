@@ -1,0 +1,79 @@
+:host {
+    max-width: 100%;
+    display: block;
+    padding: var(--dxp-c-section-container-spacing-block-start)
+        var(--dxp-c-section-container-spacing-inline-end)
+        var(--dxp-c-section-container-spacing-block-end)
+        var(--dxp-c-section-container-spacing-inline-start);
+}
+
+.section-content {
+    padding: var(
+            --dxp-c-section-content-spacing-block-start,
+            var(--dxp-s-section-content-spacing-block-start)
+        )
+        var(--dxp-c-section-content-spacing-inline-end)
+        var(
+            --dxp-c-section-content-spacing-block-end,
+            var(--dxp-s-section-content-spacing-block-end)
+        )
+        var(--dxp-c-section-content-spacing-inline-start);
+}
+
+.columns-content {
+    max-width: var(--dxp-c-section-columns-max-width, var(--dxp-s-section-columns-max-width));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Style ported from .slds-wrap */
+.wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+/* Style ported from .slds-grid */
+.grid {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+slot {
+    display: flex;
+    width: 100%;
+}
+
+@media (max-width: 48em) {
+    :host {
+        padding: var(--dxp-c-section-container-spacing-block-start-mobile)
+            var(--dxp-c-section-container-spacing-inline-end-mobile)
+            var(--dxp-c-section-container-spacing-block-end-mobile)
+            var(--dxp-c-section-container-spacing-inline-start-mobile);
+    }
+
+    .section-content {
+        padding: var(
+                --dxp-c-section-content-spacing-block-start-mobile,
+                var(--dxp-s-section-content-spacing-block-start-mobile)
+            )
+            var(--dxp-c-section-content-spacing-inline-end-mobile)
+            var(
+                --dxp-c-section-content-spacing-block-end-mobile,
+                var(--dxp-s-section-content-spacing-block-end-mobile)
+            )
+            var(--dxp-c-section-content-spacing-inline-start-mobile);
+    }
+
+    .columns-content {
+        max-width: var(
+            --dxp-c-section-columns-max-width-mobile,
+            var(--dxp-s-section-columns-max-width-mobile)
+        );
+    }
+
+    slot {
+        flex-direction: column;
+    }
+}

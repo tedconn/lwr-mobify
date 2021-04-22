@@ -1,0 +1,20 @@
+{
+    "devName": "snaThemeLayout",
+    "label": "Service Not Available",
+    "component": {
+        "descriptor": "community_layout/simpleThemeLayout",
+        "attributes": {
+            "headerBackgroundColor": "#F7F7F7",
+            "mainBackgroundColor": "#F7F7F7",
+            "footerBackgroundColor": "#F7F7F7"
+        },
+        "regions": [
+            {
+                "slotName": "header"
+            },
+            {
+                "slotName": "footer"
+            }
+        ]
+    }
+}

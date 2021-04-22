@@ -1,0 +1,61 @@
+{
+    "devName": "scopedHeaderAndFooter",
+    "label": "Scoped Header and Footer",
+    "component": {
+        "descriptor": "community_byo/scopedHeaderAndFooter",
+        "regions": [
+            {
+                "slotName": "header",
+                "components": [
+                    {
+                        "descriptor": "community_layout/section",
+                        "attributes": {
+                            "sectionConfig": {
+                              "columns": [
+                                {
+                                  "columnKey": "headerSection",
+                                  "columnName": "Column 1",
+                                  "columnWidth": "12"
+                                }
+                              ]
+                            }
+                        },
+                        "regions": [
+                            {
+                                "slotName": "headerSection",
+                                "components": [
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "slotName": "footer",
+                "components": [
+                    {
+                        "descriptor": "community_layout/section",
+                        "attributes": {
+                               "sectionConfig": {
+                              "columns": [
+                                {
+                                  "columnKey": "footerSection",
+                                  "columnName": "Column 1",
+                                  "columnWidth": "12"
+                                }
+                              ]
+                            }
+                        },
+                        "regions": [
+                            {
+                                "slotName": "footerSection",
+                                "components": [
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,5 @@
+/* Style ported from .slds-col */
+.content-container {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}

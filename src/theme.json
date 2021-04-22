@@ -1,10 +1,14 @@
 {
     "id": "byo",
     "devName": "byo",
+    "label": "Build Your Own (LWR)",
     "branding": "branding.json",
     "themeLayouts": {
         "Inner": { 
-            "view": "headerAndFooter"
+            "view": "scopedHeaderAndFooter"
+        },
+        "ServiceNotAvailable": {
+            "view": "snaThemeLayout"
         }
     }
 }

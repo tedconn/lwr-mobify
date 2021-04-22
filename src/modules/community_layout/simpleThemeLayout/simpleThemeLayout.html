@@ -1,0 +1,15 @@
+<template>
+    <header data-f6-region style={headerStyle}>
+        <div class="header-content">
+            <slot name="header"></slot>
+        </div>
+    </header>
+    <main data-f6-region style={mainStyle} role="main">
+        <slot></slot>
+    </main>
+    <footer data-f6-region style={footerStyle}>
+        <div class="footer-content">
+            <slot name="footer"></slot>
+        </div>
+    </footer>
+</template>

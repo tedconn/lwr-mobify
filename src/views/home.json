@@ -3,6 +3,40 @@
     "label": "Home",
     "themeLayoutType": "Inner",
     "component": {
-        "descriptor": "x/home"
+        "descriptor": "community_layout/sldsFlexibleLayout",
+        "regions": [
+            {
+                "slotName": "content",
+                "components": [
+                    {
+                        "descriptor": "community_layout/section",
+                        "attributes": {
+                            "sectionConfig": {
+                              "columns": [
+                                {
+                                  "columnKey": "col1",
+                                  "columnName": "Column 1",
+                                  "columnWidth": "12"
+                                }
+                              ]
+                            }
+                        },
+                        "regions": [
+                            {
+                                "slotName": "col1",
+                                "components": [
+                                    {
+                                        "descriptor": "community_builder/htmlEditor",
+                                        "attributes": {
+                                            "richTextValue": "<div style=\"display: flex; justify-content: center; align-items: center; margin: 50px 0; flex-direction: column; text-align: center;\"><div style=\"background-image: url(assets/img/desert.svg); background-size: cover; background-position: center; height: 300px; width: 100%; max-width: 600px; min-width: 300px;\"></div><h1 class=\"slds-text-heading_medium slds-p-bottom_x-small\">Start Building Your Page</h1> <div>Drag and drop a component into the content slots.</div></div>"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 }

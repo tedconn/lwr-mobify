@@ -1,0 +1,12 @@
+<template>
+    <community_builder-output-rich-text
+        enable-quill-css
+        if:false={isEditorMode}
+        value={richTextValue}
+    >
+    </community_builder-output-rich-text>
+    <div if:true={isEditorMode} class="ql-slds">
+        <div lwc:dom="manual" class="toolbar"></div>
+        <div lwc:dom="manual" class="editor"></div>
+    </div>
+</template>
