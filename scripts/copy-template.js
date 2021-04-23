@@ -43,7 +43,7 @@ function copy(src, dest) {
 copy("src/modules/**/*", "dist/src/modules");
 copy("src/partials/**/*", "dist/src/partials");
 copy("src/views/**/*", "dist/src/views");
-copy("src/public/**/*", "dist/src/public");
+copy("src/public/**/*", "dist");
 
 copy("src/branding.json", "dist/src/");
 copy("src/index.html", "dist/src/");

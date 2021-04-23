@@ -1,0 +1,12 @@
+<template>
+    <h1>Here is what CMS offers you today!</h1>
+
+    <div>
+        <template for:each={items} for:item="item">
+            <div key={item.id} style="margin-left: 20%; margin-right: 20%;">
+                <c-cex-home-card item={item}></c-cex-home-card>
+            </div>
+        </template>
+    </div>
+
+</template>

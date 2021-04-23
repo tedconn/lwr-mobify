@@ -1,0 +1,20 @@
+<manifest>
+    <devName>talon-template-byo</devName>
+    <entryPoint>index.html</entryPoint>
+    <defaultThemeRef>theme.json</defaultThemeRef>
+    <paletteCmpRef>talon-template-byo:palette</paletteCmpRef>
+    <templateParams>
+        <param name="AuthenticationType" type="enum" enum="comm.sites.shared.sitecom.enums.SiteAuthenticationTypeEnum"/>
+    </templateParams>
+    <imgUrls>
+        <imgUrl>/sfsites/assets/proto/talon-byo-1.jpg</imgUrl>
+        <imgUrl>/sfsites/assets/proto/talon-byo-2.jpg</imgUrl>
+        <imgUrl>/sfsites/assets/proto/talon-byo-3.jpg</imgUrl>
+    </imgUrls>
+    <highlights>
+       <highlight name="UnparalleledPerformance"/>
+       <highlight name="StandardBasedCustomization"/>
+       <highlight name="EnhancedDeveloperProductivity"/>
+    </highlights>
+    <createdDate>2020-11-30T01:00:00Z</createdDate>
+</manifest>

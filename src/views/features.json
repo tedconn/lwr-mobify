@@ -1,8 +1,0 @@
-{
-    "devName": "features",
-    "label": "Features",
-    "themeLayoutType": "Inner",
-    "component": {
-        "descriptor": "x/features"
-    }
-}

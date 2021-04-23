@@ -1,0 +1,11 @@
+<template>
+    
+    <template if:false={loading}>
+        <c-cex-product-card product={product}></c-cex-product-card>
+    </template>
+
+    <template if:true={loading}>
+        <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+    </template>
+    
+</template>

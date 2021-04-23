@@ -1,5 +1,5 @@
 import lightningQuill from 'lightning/quillLib';
-import VideoElementTitle from '@salesforce/label/CommBuilderRichTextEditor.VideoElementTitle';
+// import VideoElementTitle from '@salesforce/label/CommBuilderRichTextEditor.VideoElementTitle';
 
 const { Quill } = lightningQuill;
 
@@ -16,7 +16,7 @@ class CustomVideoEmbed extends VideoEmbed {
         newNode.classList.add('ql-video');
         newNode.setAttribute('allowfullscreen', 'true');
         newNode.setAttribute('width', '100%');
-        newNode.setAttribute('title', VideoElementTitle.replace('{0}', value));
+        newNode.setAttribute('title', "{0}".replace('{0}', value));
         newNode.setAttribute('src', value);
         node.appendChild(newNode);
         return node;

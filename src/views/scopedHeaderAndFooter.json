@@ -24,6 +24,9 @@
                             {
                                 "slotName": "headerSection",
                                 "components": [
+                                    {
+                                        "descriptor": "c/cexHeader"
+                                    }
                                 ]
                             }
                         ]
@@ -50,6 +53,9 @@
                             {
                                 "slotName": "footerSection",
                                 "components": [
+                                    {
+                                        "descriptor": "c/cexFooter"
+                                    }
                                 ]
                             }
                         ]

@@ -1,4 +1,4 @@
-import locale from '@salesforce/i18n/locale';
+const locale = "en";
 
 const NA_PHONE_NUMBER = '($1) $2-$3';
 const IS_TEN_DIGITS = /^\d{10}$/;

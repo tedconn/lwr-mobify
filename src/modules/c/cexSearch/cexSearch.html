@@ -1,0 +1,41 @@
+<template>
+    <div>
+        Search: <input width="40" onkeyup={keyup}><button onclick={search}>Go!</button>
+    </div>
+
+    <div if:true={loaded}>
+        <template if:false={emptySearch}>
+            <template if:false={loading} for:each={rows} for:item="row">
+                <div key={row.id} class="slds-grid slds-gutters">
+                    <template for:each={row.items} for:item="item">
+                        <c-cex-search-card key={item.id} product={item} class="slds-col slds-size_1-of-4"></c-cex-search-card>
+                    </template>
+                </div>
+            </template>
+        </template>
+
+        <template if:true={emptySearch}>
+            <template if:false={loading}>
+                There is no product matching your request '{searchTerm}'
+            </template>
+        </template>
+
+        <template if:true={loading}>
+            <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+        </template>
+    </div>
+
+    <div if:false={loaded} style="margin-top: 1em">
+        <template if:false={loading}>
+            Please enter your search terms and press 'enter'!
+        </template>
+        <template if:true={loading}>
+            <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+        </template>
+    </div>
+
+    <!--
+    <div>{resultAsString}</div>
+    -->
+
+</template>

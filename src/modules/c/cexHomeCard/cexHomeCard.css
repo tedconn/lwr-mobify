@@ -1,0 +1,27 @@
+h2 {
+    font-size: 24px;
+    text-align: center;
+    margin: 20px 20px 20px 20px;
+}
+
+ul li {
+    word-break: break-all;
+    white-space: normal;
+}
+
+.price-container {
+    line-height: 2rem;
+}
+
+.price-line-through {
+    text-decoration: line-through;
+}
+
+.negotiated-price {
+    padding-right: 0.4rem;
+}
+
+/**Only the first 'value' is in bold. This is sometimes list price and sometimes negotiated price, depending on how the values are set*/
+.value:first-child {
+    font-weight: var(--lwc-fontWeightBold);
+}

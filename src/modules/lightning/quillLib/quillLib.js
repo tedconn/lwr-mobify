@@ -1,7 +1,7 @@
 import Quill from './quill';
 import { createComponent } from 'aura';
-import labelImageSizeExceeded from '@salesforce/label/LightningRichTextEditor.imageSizeExceeded';
-import labelImageUploadFailed from '@salesforce/label/LightningRichTextEditor.imageUploadFailed';
+// import labelImageSizeExceeded from '@salesforce/label/LightningRichTextEditor.imageSizeExceeded';
+// import labelImageUploadFailed from '@salesforce/label/LightningRichTextEditor.imageUploadFailed';
 import sanitizeHTML from 'lightning/purifyLib';
 import { ArraySlice, isUndefinedOrNull } from 'lightning/utilsPrivate';
 
@@ -619,8 +619,8 @@ const inputRichTextLibrary = {
     ALLOWED_ATTRS,
     ALLOWED_TAGS,
     IMAGE_MAX_SIZE,
-    labelImageSizeExceeded,
-    labelImageUploadFailed,
+    labelImageSizeExceeded: "",
+    labelImageUploadFailed: "",
 };
 
 export default { Quill, inputRichTextLibrary, applyEmitterShadowDOMFix };

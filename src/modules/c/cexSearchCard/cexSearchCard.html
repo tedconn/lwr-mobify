@@ -1,0 +1,35 @@
+<template>
+    <div class="slds-grid card-item">
+        <a href="#" onclick={handleNavigate}>
+            <section class="cardContainerGrid" style="background-color: var(--dxp-g-root); border-color: var(--dxp-g-root); border-radius: 1">
+                <div class="imageArea">
+                    <figure class="productImage" style="align-self: center; justify-self: center"><img src={product.image}></figure>
+                </div>
+                <div class="fieldsArea">            
+                    <div tabindex="0" class="slds-text-heading_medium slds-truncate" style="color: rgb(63, 63, 63); align-self: center; justify-self: center">
+                        <div>{product.description}</div>
+                    </div>
+                </div>
+                <div class="priceArea" style="align-self: center; justify-self: center">
+                    <div  class="price-container">
+                        <div  class="slds-grid slds-wrap">
+                            <div  class="slds-align-bottom">
+                                <c-cex-formatted-price class="slds-text-heading_medium negotiated-price value" style="color: var(--dxp-g-root-contrast)"
+                                    value={product.reducedPrice}
+                                    currency-code="USD">
+                                </c-cex-formatted-price>
+                            </div>
+                            <div  class="slds-align-bottom">
+                                <c-cex-formatted-price class="slds-text-heading_medium listing-price value price-line-through" style="color: var(--dxp-g-root-contrast)"
+                                    value={product.price}
+                                    currency-code="USD">
+                                    {product.price}
+                                </c-cex-formatted-price>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </a>
+    </div>
+</template>

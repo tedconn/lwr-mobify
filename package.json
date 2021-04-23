@@ -20,7 +20,7 @@
     "webpack-cli": "^3.3.7"
   },
   "scripts": {
-    "start": "node src",
+    "start": "node scripts/copy-template.js && node src",
     "bundle": "npm run clean && ./node_modules/.bin/webpack-cli",
     "clean": "rm -fr dist",
     "upload": "sdk-upload --buildDirectory dist",

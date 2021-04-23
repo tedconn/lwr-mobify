@@ -1,0 +1,28 @@
+<template>
+    <div>
+        <section style="background-color: var(--dxp-g-root); border-color: var(--dxp-g-root); border-radius: 1">
+            <div class="titleArea">
+                <h2>{item.title}</h2>
+            </div>
+            <div class="imageArea">
+                <figure class="productImage" style="align-self: center; justify-self: center"><img src={item.image}></figure>
+            </div>
+            <div class="fieldsArea">      
+                <div tabindex="0" class="slds-text-heading_medium slds-truncate" style="color: rgb(63, 63, 63); align-self: center; justify-self: center">
+                    <div lwc:dom="manual" class="richtext-1"></div>
+                </div>
+            </div>
+            <div class="priceArea" style="align-self: center; justify-self: center">
+                <div  class="price-container">
+                    <div  class="slds-grid slds-wrap">
+                        <div  class="slds-align-bottom">
+                            <div class="slds-text-heading_medium listing-price value" style="color: var(--dxp-g-root-contrast)">
+                                {item.price}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</template>
