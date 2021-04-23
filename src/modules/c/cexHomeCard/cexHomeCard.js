@@ -3,10 +3,8 @@ import { LightningElement, api } from 'lwc';
 export default class HomeCard extends LightningElement  {
 
   @api item;
-  itemAsString = "sjdhwhckjwdhkjhdskchkdshcvkjdshvkjdshjkvhsdjkvhsdkjhv;kj";
 
   connectedCallback() {
-    this.itemAsString = JSON.stringify(this.item);
   }
 
   renderedCallback() {

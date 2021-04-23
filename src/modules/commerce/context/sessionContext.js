@@ -38,6 +38,10 @@ class SessionContext {
     get isGuestCartCheckoutEnabled() {
         return !!contextData && 'true' === contextData.isGuestCartCheckoutEnabled;
     }
+
+    get paymentComponentName() {
+        return contextData ? contextData.paymentComponentName : null;
+    }
 }
 
 const sessionContextStore = new Store('SessionContext', {

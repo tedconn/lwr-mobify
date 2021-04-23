@@ -1,58 +1,67 @@
 [
     {
-        "id": "home",
-        "devName": "Home",
         "path": "/",
-        "isRoot": true,
         "view": "home",
+        "isRoot": true,
+        "name": "home",
         "label": "Home",
         "page": {
-            "type": "comm__namedPage",
             "attributes": {
                 "name": "Home"
-            }
+            },
+            "type": "comm__namedPage"
         }
     },
     {
-        "id": "search",
-        "devName": "Search",
-        "path": "/search",
-        "isRoot": false,
-        "view": "search",
-        "label": "Search",
-        "page": {
-            "type": "comm__namedPage",
-            "attributes": {
-                "name": "Search"
-            }
-        }
-    },
-    {
-        "id": "product",
-        "devName": "Product",
-        "path": "/product",
-        "isRoot": false,
-        "view": "product",
-        "label": "Product",
-        "page": {
-            "type": "comm__namedPage",
-            "attributes": {
-                "name": "Product"
-            }
-        }
-    },
-    {
-        "id": "error",
-        "devName": "Error",
-        "path": "/error",
-        "isDefault": true,
+        "path": "\/error",
         "view": "error",
+        "isRoot": false,
+        "name": "error",
         "label": "Error",
         "page": {
-            "type": "comm__namedPage",
             "attributes": {
                 "name": "Error"
-            }
+            },
+            "type": "comm__namedPage"
+        }
+    },
+    {
+        "path": "\/serviceNotAvailable",
+        "view": "serviceNotAvailable",
+        "isRoot": false,
+        "name": "serviceNotAvailable",
+        "label": "Service Not Available",
+        "page": {
+            "attributes": {
+                "name": "Service Not Available"
+            },
+            "type": "comm__namedPage"
+        }
+    },
+    {
+        "path": "\/search",
+        "view": "search",
+        "isRoot": false,
+        "name": "search",
+        "label": "search",
+        "page": {
+            "attributes": {
+                "name": "search"
+            },
+            "type": "comm__namedPage"
+        }
+    },
+    {
+        "path": "\/product",
+        "view": "product",
+        "isRoot": false,
+        "name": "product",
+        "label": "product",
+        "page": {
+            "attributes": {
+                "name": "product"
+            },
+            "type": "comm__namedPage"
         }
     }
 ]

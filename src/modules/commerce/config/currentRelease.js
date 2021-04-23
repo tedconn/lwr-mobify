@@ -1,5 +1,5 @@
 const currentRelease = {
-  currentRelease: '232',
-  apiVersion: 'v52.0'
+  currentRelease: '234',
+  apiVersion: 'v53.0'
 };
 export { currentRelease };

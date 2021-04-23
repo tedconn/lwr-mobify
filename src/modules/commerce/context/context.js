@@ -91,6 +91,10 @@ class _AppContext {
         return this.sessionContext ? this.sessionContext.isGuestCartCheckoutEnabled : false;
     }
 
+    get paymentComponentName() {
+        return this.sessionContext ? this.sessionContext.paymentComponentName : null;
+    }
+
     //
     // Einstein config
     //

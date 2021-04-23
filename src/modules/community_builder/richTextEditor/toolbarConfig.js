@@ -9,7 +9,7 @@ import labelItalic from '@salesforce/label/LightningRichTextButton.italic';
 import labelStrike from '@salesforce/label/LightningRichTextButton.strike';
 import labelUnderline from '@salesforce/label/LightningRichTextButton.underline';
 
-/* import labelBullet from '@salesforce/label/LightningRichTextButton.bullet';
+import labelBullet from '@salesforce/label/LightningRichTextButton.bullet';
 import labelNumber from '@salesforce/label/LightningRichTextButton.number';
 import labelIndent from '@salesforce/label/LightningRichTextButton.indent';
 import labelOutdent from '@salesforce/label/LightningRichTextButton.outdent';
@@ -29,7 +29,7 @@ import labelInsertContent from '@salesforce/label/LightningRichTextEditor.insert
 import labelImage from '@salesforce/label/LightningRichTextButton.image';
 import labelLink from '@salesforce/label/LightningRichTextButton.link';
 
-import labelVideo from '@salesforce/label/LightningRichTextButton.video';*/
+import labelVideo from '@salesforce/label/LightningRichTextButton.video';
 
 const DEFAULT_FONT_NAME_VALUE = '';
 const DEFAULT_FONT_SIZE_VALUE = '';
@@ -39,7 +39,7 @@ const DEFAULT_FONT_SIZE_VALUE = '';
  */
 const FONT_LIST = [
     {
-        label: "labelDefaultFontName",
+        label: labelDefaultFontName,
         value: DEFAULT_FONT_NAME_VALUE
     },
     {
@@ -86,7 +86,7 @@ const FONT_LIST = [
 
 const SIZE_LIST = [
     {
-        label: "labelDefaultFontSize",
+        label: labelDefaultFontSize,
         value: DEFAULT_FONT_SIZE_VALUE
     },
     {
@@ -158,40 +158,40 @@ const SIZE_LIST = [
  * the button names need to match the corresponding quill formats
  */
 const buttons = Object.freeze({
-    bold: "labelBold",
-    italic: "labelItalic",
-    underline: "labelUnderline",
-    strike: "labelStrike",
+    bold: labelBold,
+    italic: labelItalic,
+    underline: labelUnderline,
+    strike: labelStrike,
     list: {
-        ordered: "labelNumber",
-        bullet: "labelBullet"
+        ordered: labelNumber,
+        bullet: labelBullet
     },
     indent: {
-        '+1': "labelIndent",
-        '-1': "labelOutdent"
+        '+1': labelIndent,
+        '-1': labelOutdent
     },
     align: {
-        '': "labelLeftAlign",
-        center: "labelCenterAlign",
-        right: "labelRightAlign"
+        '': labelLeftAlign,
+        center: labelCenterAlign,
+        right: labelRightAlign
     },
-    link: "labelLink",
-    video: "labelVideo",
-    image: "labelImage",
-    clean: "labelRemoveFormatting"
+    link: labelLink,
+    video: labelVideo,
+    image: labelImage,
+    clean: labelRemoveFormatting
 });
 
 const i18n = Object.freeze({
-    font: "labelFont",
-    fontSize: "labelFontSize",
-    defaultOptionTooltip: "labelDefaultOptionTooltip",
-    formatFont: "labelFormatFont",
-    formatText: "labelFormatText",
-    formatBody: "labelFormatBody",
-    alignText: "labelAlignText",
-    formatBackground: "labelFormatBackground",
-    insertContent: "labelInsertContent",
-    removeFormatting: "labelRemoveFormatting",
+    font: labelFont,
+    fontSize: labelFontSize,
+    defaultOptionTooltip: labelDefaultOptionTooltip,
+    formatFont: labelFormatFont,
+    formatText: labelFormatText,
+    formatBody: labelFormatBody,
+    alignText: labelAlignText,
+    formatBackground: labelFormatBackground,
+    insertContent: labelInsertContent,
+    removeFormatting: labelRemoveFormatting,
     buttons
 });
 

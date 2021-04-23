@@ -1,4 +1,6 @@
 import { LightningElement } from 'lwc';
+
+import { getSessionContext } from 'commerce/contextApi';
 import communityBasePath from '@salesforce/community/basePath';
 
 export default class CommerceHeader extends LightningElement {
@@ -7,8 +9,12 @@ export default class CommerceHeader extends LightningElement {
     userName = "";
 
     connectedCallback() {
-        this.isLoggedIn = false;
-        this.userName = null;
+        getSessionContext().then( (context) => {
+            this.isLoggedIn = context.isLoggedIn;
+            this.userName = context.userName;
+        }).catch( (error) => {
+            console.log(JSON.stringify(error))
+        });
     }
 
     get homeLink() {

@@ -151,8 +151,14 @@ export async function productSearch(searchTerm) {
   return accessor.productSearch(searchTerm);
 }
 
-export async function cmsContent(searchTerm) {
-  return fetch(PROXY+"https://d23q98rtu4xlmj.cloudfront.net/static/00Dxx0000001gXl/0apxx000000010C.json")
+const CC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+export async function cmsContent() {
+  let RANDOM_KEY = "";
+  for(let i=0; i<16; i++) {
+    const pos = Math.random()*CC.length;
+    RANDOM_KEY = RANDOM_KEY + CC.substring(pos,pos+1);
+  }
+  return fetch(PROXY+`https://d23q98rtu4xlmj.cloudfront.net/static/00Dxx0000001gXl/0apxx000000010C.json?q=${RANDOM_KEY}`)
     .then(response => { 
       return response.json();
     })

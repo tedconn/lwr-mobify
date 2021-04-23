@@ -5,7 +5,7 @@ import {
     expandSelectionToNode,
     insertEmbed
 } from './toolbarUtil';
-//import CommunityId from '@salesforce/community/Id';
+import CommunityId from '@salesforce/community/Id';
 import {
     getPathPrefix,
     getCMSContentUrl
@@ -80,7 +80,7 @@ export function imageButtonClickHandler(quillApi, connection, selectionRange) {
     );
 
     sendMessage(connection, 'enter-rte-cms-content-selector', {
-        deliveryTargetId: "CommunityId"
+        deliveryTargetId: CommunityId
     });
 }
 

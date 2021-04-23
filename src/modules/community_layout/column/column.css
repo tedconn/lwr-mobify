@@ -34,11 +34,8 @@
     flex: 1;
 
     padding: var(--dxp-c-column-content-spacing-block-start)
-        var(--dxp-c-column-content-spacing-inline-end)
-        var(--dxp-c-column-content-spacing-block-end)
+        var(--dxp-c-column-content-spacing-inline-end) var(--dxp-c-column-content-spacing-block-end)
         var(--dxp-c-column-content-spacing-inline-start);
-
-    background: var(--dxp-g-root, transparent);
 }
 
 @media (max-width: 48em) {
