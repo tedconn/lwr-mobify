@@ -1,4 +1,4 @@
-/* import labelFormatText from '@salesforce/label/LightningRichTextEditor.formatText';
+import labelFormatText from '@salesforce/label/LightningRichTextEditor.formatText';
 import labelFormatBody from '@salesforce/label/LightningRichTextEditor.formatBody';
 import labelAlignText from '@salesforce/label/LightningRichTextEditor.alignText';
 import labelFormatBackground from '@salesforce/label/LightningRichTextEditor.formatBackground';
@@ -9,7 +9,7 @@ import labelItalic from '@salesforce/label/LightningRichTextButton.italic';
 import labelStrike from '@salesforce/label/LightningRichTextButton.strike';
 import labelUnderline from '@salesforce/label/LightningRichTextButton.underline';
 
-import labelBullet from '@salesforce/label/LightningRichTextButton.bullet';
+/* import labelBullet from '@salesforce/label/LightningRichTextButton.bullet';
 import labelNumber from '@salesforce/label/LightningRichTextButton.number';
 import labelIndent from '@salesforce/label/LightningRichTextButton.indent';
 import labelOutdent from '@salesforce/label/LightningRichTextButton.outdent';

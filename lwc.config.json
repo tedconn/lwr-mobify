@@ -1,7 +1,31 @@
 {
   "modules": [
-      {
-          "dir": "src/modules"
-      }
+    {
+      "dir": "src/modules"
+    },
+    {
+      "name": "@salesforce/i18n/locale",
+      "path": "src/scoped/@salesforce-i18n-locale.js"
+    },
+    {
+      "name": "@salesforce/label/LightningRichTextEditor.formatText",
+      "path": "src/scoped/@salesforce-label-LightningRichTextEditor.formatText.js"
+    },
+    {
+      "name": "@salesforce/label/LightningRichTextEditor.alignText",
+      "path": "src/scoped/@salesforce-label-LightningRichTextEditor.alignText.js"
+    },
+    {
+      "name": "@salesforce/label/LightningRichTextEditor.formatBackground",
+      "path": "src/scoped/@salesforce-label-LightningRichTextEditor.formatBackground.js"
+    },
+    {
+      "name": "@salesforce/label/LightningRichTextEditor.formatBody",
+      "path": "src/scoped/@salesforce-label-LightningRichTextEditor.formatBody.js"
+    },
+    {
+      "name": "@salesforce/label/LightningRichTextEditor.removeFormatting",
+      "path": "src/scoped/@salesforce-label-LightningRichTextEditor.removeFormatting.js"
+    }
   ]
 }

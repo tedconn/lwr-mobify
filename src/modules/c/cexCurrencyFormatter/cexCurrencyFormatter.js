@@ -1,4 +1,4 @@
-// import LOCALE from '@salesforce/i18n/locale';
+import LOCALE from '@salesforce/i18n/locale';
 
 /**
  * In-memory formatter cache
@@ -35,7 +35,7 @@ export default function format(currency, value, currencyDisplay = 'symbol') {
     let formatter = _formatterCache.get(key);
 
     if (!formatter) {
-        formatter = new Intl.NumberFormat("en", {
+        formatter = new Intl.NumberFormat(LOCALE, {
             style: 'currency',
             currency,
             currencyDisplay
