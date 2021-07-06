@@ -3,6 +3,8 @@
 // https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html
 const awsServerlessExpress = require('aws-serverless-express')
 
-const awsServer = awsServerlessExpress.createServer(server.app)
+const lwrServer = require('./app')
+
+const awsServer = awsServerlessExpress.createServer(lwrServer.app)
 
 exports.get = (event, context) => awsServerlessExpress.proxy(awsServer, event, context)
