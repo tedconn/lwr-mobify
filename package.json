@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "node scripts/copy-template.js && node src",
-    "bundle": "npm run clean && ./node_modules/.bin/webpack-cli",
+    "bundle": "npm run clean && ./node_modules/.bin/webpack-cli --mode production",
     "clean": "rm -fr dist",
     "upload": "sdk-upload --buildDirectory dist",
     "deploy": "npm run bundle && npm run upload -- --target 'production'"
